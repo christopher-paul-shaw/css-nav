@@ -1,0 +1,97 @@
+.c-nav {
+	
+  background: #222;
+  color: #fff;
+  opacity: 0.9;
+	z-index: 99;
+
+  a {
+		text-decoration: none;
+		color: inherit;
+		height: 100%;
+		width: 100%;
+		display: block;
+  }
+
+  .c-nav__menu label:hover {
+    background: #333;
+  }
+
+  // Always Hide
+  .c-nav__toggle--checkbox {
+    display: none;
+  }
+
+  .c-nav__container {
+    width: 100%;
+  }
+  .c-nav__logo, .c-nav__menu, .c-nav__toggle {
+    display: inline-block;
+    min-height: 50px;
+    line-height: 50px;
+  }
+  .c-nav__menu label {
+    height: 100%;
+    line-height: 50px;
+  }
+  
+  // Mobile Only Logic
+  @media screen and (max-width: 750px) {
+    
+    .c-nav__menu {
+      display: none;
+      position: relative;
+    }
+    
+    .c-nav__logo, .c-nav__toggle {
+      padding: 0px 20px;
+      width: 40%;
+    }
+    
+    .c-nav__toggle {
+      text-align: right;
+      float: right;
+    }
+    
+    .c-nav__toggle--checkbox:checked~.c-nav__menu {
+      display: block;
+    }
+    
+    .c-nav__menu,
+    .menu_check {
+      display: none;
+    }
+    
+    .c-nav__menu label {   
+      text-align: left;
+      padding-left: 10px;
+      position: relative;
+      border-top: 1px solid rgba(190, 192, 192, 0.1);
+      height: auto;
+      display: block
+    }
+    
+  }
+
+  // Desktop
+  @media screen and (min-width: 750px) {
+    width: 100%;
+    top: 0px;
+            
+    .c-nav__toggle , #menu_toggle{
+        display: none;
+    }
+        
+    .c-nav__menu {
+      position: relative;
+      text-align: right;
+      float: right;
+
+    }
+
+    .c-nav__container {
+      width: 80%;
+      margin: auto;
+    }
+  }
+}
